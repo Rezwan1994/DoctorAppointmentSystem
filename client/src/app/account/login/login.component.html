@@ -3,15 +3,15 @@
     <div class="login_wrapper">
         <section id="loginForm" class="login_content">
                 <h1>Login Form</h1>
-                <form >
+                <form method="POST">
                     <div>
-                        <input type="text" class="form-control" placeholder="Email">
+                        <input type="text" class="form-control" placeholder="Email"  name="your_name" [(ngModel)]="securityService.userModel.userName">
                     </div>
                     <div>
-                        <input type="text" class="form-control" placeholder="Password">
+                        <input type="text" class="form-control" placeholder="Password"  name="your_pass" [(ngModel)]="securityService.userModel.password">
                     </div>
                     <div >
-                        <input type="button" (click)="onSubmit()" value="Log in" class="btn btn-default" />
+                        <input type="submit" (click)="login()" value="Log in" class="btn btn-default" />
                         <div class="checkbox">
                             <input type="checkbox"/>
                             <label>Remember me</label>
